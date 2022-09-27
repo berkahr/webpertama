@@ -1,0 +1,114 @@
+#gambar{
+	float:left;
+	margin:0 8px 4px 0;
+	width:130px;
+	height:140px;
+}
+#fix{
+	text-align:justify;
+	width:auto;
+	background: #d8e4e3c7;
+	border-radius: 5px;
+	padding:8px;
+	box-shadow: 0px 10px 20px 0px #D1D1D1;
+}
+#fix2{
+	text-align:justify;
+	width:auto;
+	background: #0a9fda96;
+	border-radius: 5px;
+	padding:8px;
+	box-shadow: 0px 10px 20px 0px #82c7f5;
+}
+
+#judul{
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	padding: auto;
+}
+.sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+  
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+  
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+  
+.sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+  
+.openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+}
+  
+.openbtn:hover {
+	background-color: #444;
+}
+  
+#main {
+	transition: margin-left .5s;
+	padding: 16px;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
+}
+/* kotak diatas */
+.header{
+  width: auto;
+  overflow: hidden;
+  
+}
+.log{
+  float: right;
+}
+.log li{
+  margin-right: 20px;
+  float: right;
+  font-size: 18px;
+  display: block; /* biar gak ada buletan item */
+}
+.log li a{
+  color: #fff;
+  text-decoration: none;/* biar gak ada UNDERLIJNE */
+}
+.log li a:hover{
+  color: #1dd1a1;
+  text-decoration: none;
+}
+/* .logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+} */

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+	<style>table, th, td {
+		border:1px solid black; text-align:center; margin-left:auto; margin-right:auto;
+		}
+		table td.c1{text-align:left;}
+	</style>
+    <body bgcolor="lightblue">
+		<h4>Contoh penggunaan form</h4>
+		<form method="POST">
+		<table>
+			<caption>Biodata Diri</caption>
+            <tr>
+                <td> Nama</td>
+                <td>  :  </td>
+                <td><input type="text" name="nama" size="20"></td>
+            </tr>
+            <tr>
+                <td> Alamat </td>
+                <td>  :  </td>
+                <td><textarea cols="20" rows="5" name="alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td> No Hp </td>
+                <td>  :  </td>
+                <td><input type="text" name="no" size="20"></td>
+            </tr>
+			<tr>
+                <td> Jurusan </td>
+				<td>  :  </td>
+                <td><select name="jurusan">
+					<option value="TI"> Teknik Informatika </option>
+					<option value="SI"> Sistem Informatika </option>
+					</select></td>
+            </tr>
+            <tr>
+                <td> Hobby </td>
+                <td>  :  </td>
+                <td class="c1">
+					<input type="checkbox" name="hobi" value="berenang">Berenang<br>
+					<input type="checkbox" name="hobi" value="musik">Musik<br>
+					<input type="checkbox" name="hobi" value="makan">Makan<br>
+					<input type="checkbox" name="hobi" value="tidur">Tidur<br>
+				</td>
+            </tr>
+            <tr>
+                <td> foto </td>
+				<td>  :  </td>
+                <td><img src="Fcat.jpg" height="75" width="75"></td>
+            </tr>
+            <tr>
+                <td rowspan ="2"> Orang Tua </td>
+                <td rowspan ="2"> : </td>
+                <td> Nama Ayah </td>
+            </tr>
+            <tr>
+                <td> Nama Ibu </td>
+            </tr>
+			 <tr>
+                <td> Gender </td>
+				<td>  :  </td>
+                <td class="c1">
+					<input type="radio" name="gender" value="pria">Pria<br>
+					<input type="radio" name="gender" value="wanita">Wanita<br>
+				</td>
+            </tr>
+			<tr>
+				<td colspan="2"><input type="submit" name="simpan" value="Simpan"></td>
+				<td><input type="reset" name="hapus" value="Hapus"></td>
+			</tr>
+        </table>
+    </body>
+</html>

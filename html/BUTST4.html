@@ -1,0 +1,103 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		table, th, td {border:2px solid black; text-align : center; border-radius: 5px; padding: 5px; margin-left:auto; margin-right:auto;}
+		p{text-align: center; font-size : 36}
+		td:nth-child(even), th:nth-child(even) {background-color: #D6EEEE;}
+	</style>
+</head>
+<body bgcolor="lightblue">
+	<script src="BUTST4.js"></script>
+	<table width="60%"bgcolor ="#99bbff">
+		<caption><b><font size="12" face="calibri" color="Black">Keterangan Harga Tiket</font></b></caption>
+		<tr>
+			<td> </td>
+			<td> Eksekutif </td>
+			<td> Bisnis </td>
+			<td> Ekonomi </td>
+		</tr>
+		<tr>
+            <td><b>Jakarta</b></td>
+			<td> 200.000 </td>
+			<td> 80.000 </td>
+			<td> 60.000 </td>
+		</tr>
+		<tr>
+            <td><b>Surabaya</b></td>
+			<td> 140.000 </td>
+			<td> 60.000 </td>
+			<td> 40.000 </td>
+		</tr>
+		<tr>
+            <td><b>Yogyakarta</b></td>
+			<td> 130.000 </td>
+			<td> 50.000 </td>
+			<td> 30.000 </td>
+		</tr>
+		<tr>
+            <td><b>Bandung</b></td>
+			<td> 180.000 </td>
+			<td> 70.000 </td>
+			<td> 65.000 </td>
+		</tr>
+		<tr>
+            <td><b>Semarang</b></td>
+			<td> 150.000 </td>
+			<td> 75.000 </td>
+			<td> 45.000 </td>
+		</tr>
+	</table>
+	
+	<form name ="form">
+        <table bgcolor="skyblue"; width="50%">
+		<caption><b><font size="12" face="calibri" color="Black">Sistem Transaksi Pemesanan Tiket</font></b></caption>
+            <tr>
+                <td colspan ="2"><b>BUS CEMERLANG CAHAYA</b></td>
+            </tr>
+            <tr>
+                <td><pre>
+                Nama :<input type="text" size="20" name="nama">
+                <br>
+                Tujuan :<select name="tujuan" size=1>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Semarang">Semarang</option>
+                </select>
+                <br>
+                Kelas :<select name="kelas" size=1>
+                <option value="Eksekutif">Eksekutif</option>
+                <option value="Bisnis">Bisnis</option>
+                <option value="Ekonomi">Ekonomi</option>
+                </select>
+                <br>
+                Jumlah Tiket :<input type="text" size="11" name="jumlah">
+                <br>
+                Member :<input type="checkbox" name="member">Ya<input type="checkbox" name="member">Tidak</td></pre>
+                <br>
+                <td><pre>
+                Harga Tiket :<input type="text" size="10" name="harga_tiket">
+                <br>
+                Sub Total :<input type="text" size="10" name="sub_total">
+                <br>
+                Diskon :<input type="text" size="10" name="potongan_harga">
+                <br>
+                Total Bayar :<input type="text" size="10" name="total_bayar"></td><pre>
+            </tr> 
+            <tr>
+                <td colspan="2">
+                <center>
+                <INPUT TYPE="button" value="Hitung" onclick="hitungtotal()">
+                <INPUT TYPE="reset" value="Ulang">
+                </center></td>
+            </tr>
+            <tr>
+                <td width="100%" colspan="2" align="center">@copyright BerkahRiyadi_20200801234</td>
+            </tr>
+        </table>
+    </form>      
+</body>
+</html>
