@@ -1,0 +1,50 @@
+iaccountrepository
+using API.Models;
+using API.ViewModels;
+
+namespace API.Repositories.Interface
+{
+    public interface IAccountsRepository : IGeneralRepository<Accounts, string>
+    {
+        int Register(RegisterAccountVM registerAccountVM);
+        bool Login(LoginVM loginVm);
+    }
+}
+-------------------------------------------------------------------------------------------------
+accountrepository
+public int Register(RegisterAccountVM registerAccountVM) {
+            int result = 0;
+            //insert to Account table
+            var accounts = new Accounts
+            {
+                memberId = registerAccountVM.Id,
+                password = Hashing.HashPassword(registerAccountVM.Password)
+            };
+            _context.Set<Accounts>().Add(accounts);
+            result += _context.SaveChanges();
+
+            return result;
+        }
+------------------------------------------------------------------------------------------------------
+accountcontroller
+public ActionResult Register(RegisterAccountVM registerAccountVM)
+        {
+            var register = _repository.Register(registerAccountVM);
+            if (register > 0)
+            {
+                return Ok(new ResponseDataVM<string>
+                {
+                    Code = StatusCodes.Status200OK,
+                    Status = HttpStatusCode.OK.ToString(),
+                    Message = "Insert Success"
+                });
+            }
+
+            return BadRequest(new ResponseErrorsVM<string>
+            {
+                Code = StatusCodes.Status500InternalServerError,
+                Status = HttpStatusCode.InternalServerError.ToString(),
+                Errors = "Insert Failed / Lost Connection"
+            });
+        }
+------------------------------------------------------------------------------------------------------
